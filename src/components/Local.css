@@ -1,0 +1,18 @@
+/* "local" messages are shown on the left side */
+.chat-entry.local {
+  text-align: left;
+}
+
+.chat-entry.local .entry-time {
+  text-align: right;
+}
+
+.chat-entry.local .entry-bubble:before {
+  left: -33px;
+
+  border-color: lightyellow transparent transparent transparent;
+}
+
+.chat-entry.local .entry-bubble:hover:before {
+  border-color: #fefea2 transparent transparent transparent;
+}

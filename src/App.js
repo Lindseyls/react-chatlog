@@ -11,11 +11,7 @@ class App extends Component {
     const senderVladimir = chatMessages[0]["sender"];
     const senderEstragon = chatMessages[1]["sender"];
 
-    const messageComponents = chatMessages.map((entry, index) => {
-      return <Message key={ index } name={entry["sender"]} body={entry["body"]} time={entry["timeStamp"]} />
-    });
-
-    console.log(messageComponents);
+    const messageComponents = <Message chatEntry={chatMessages} />;
 
     return (
       <div className="App">

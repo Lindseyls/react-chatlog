@@ -1,0 +1,29 @@
+/* "remote" messages are shown on the right side, in blue */
+.chat-entry.remote {
+  text-align: right;
+}
+
+.chat-entry.remote .entry-bubble {
+  margin-right: 0;
+  margin-left: auto;
+
+  background-color: lightcyan;
+}
+
+.chat-entry.remote .entry-bubble:hover {
+  background-color: #a9f6f6;
+}
+
+.chat-entry.remote .entry-time {
+  text-align: left;
+}
+
+.chat-entry.remote .entry-bubble:before {
+  left: 33px;
+
+  border-color: lightcyan transparent transparent transparent;
+}
+
+.chat-entry.remote .entry-bubble:hover:before {
+  border-color: #a9f6f6 transparent transparent transparent;
+}

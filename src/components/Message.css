@@ -1,0 +1,74 @@
+/*******************/
+/* Chat log styles */
+/*******************/
+
+.chat-log {
+  max-width: 50rem;
+  margin: auto;
+}
+
+
+
+
+/***********************/
+/* Chat message styles */
+/***********************/
+
+.chat-entry {
+  margin: 1rem;
+}
+
+.chat-entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-bubble {
+  width: fit-content;
+  min-width: 10rem;
+  max-width: 50rem;
+
+  padding: 1rem 1rem 0.1rem 1rem;
+
+  background-color: lightyellow;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+}
+
+.entry-bubble:hover {
+  background-color: #fefea2;
+}
+
+.entry-name {
+  margin-bottom: 0.5rem;
+  font-size: medium;
+}
+
+.entry-body {
+  line-height: 1.5em;
+
+  margin-top: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+.entry-time {
+  font-size: x-small;
+  margin-bottom: 0.1rem;
+  margin-right: 0.5rem;
+  color: #bbb;
+}
+
+/* Chat bubble arrow styling */
+.entry-bubble:before{
+  content: ' ';
+  position: relative;
+  width: 0;
+  height: 0;
+
+  top: 6px;
+  right: auto;
+  bottom: auto;
+
+  border: 22px solid;
+}

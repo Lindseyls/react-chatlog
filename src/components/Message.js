@@ -1,29 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Timestamp from './Timestamp';
+import './Message.css'
+
+import Local from './Local';
+import Remote from './Remote';
 
 class Message extends React.Component {
   static propTypes = {
-    name: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    time: PropTypes.instanceOf(Date),
+    chatEntry: PropTypes.array.isRequired
   }
-  
+
   render() {
 
-    const entryName = this.props.name;
-    const entryBody = this.props.body;
-    const entryTime = this.props.time;
+    const chatComponents = this.props.chatEntry.map((entry, index) => {
+
+    if (entry["sender"] === "Vladimir") {
+      return <Local key={ index } name={entry["sender"]} body={entry["body"]} time={entry["timeStamp"]} />;
+    } else if (entry["sender"] === "Estragon") {
+      return <Remote key={ index } name={entry["sender"]} body={entry["body"]} time={entry["timeStamp"]} />;
+    }
+
+    });
 
     return(
-      <div>
-        {entryName}
-        {entryBody}
-        <p>
-          <Timestamp time={entryTime} />
-        </p>
-      </div>
+      <section className="chat-log">
+        {chatComponents}
+      </section>
     );
   }
 }

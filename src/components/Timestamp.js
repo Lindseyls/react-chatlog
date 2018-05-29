@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Timestamp extends React.Component {
   static propTypes = {
-    time: PropTypes.instanceOf(Date),
+    time: PropTypes.string.isRequired,
   }
 
   render() {
